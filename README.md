@@ -5,8 +5,12 @@ Uses a FIFO (first-in-first-out) file on the filesystem to transmit data over HT
 It starts a HTTP server and all data you write to the `./fifo` file can be downloaded
 using this HTTP server.
 
+You can also use it to receive data.
+
 This essentially creates a streaming filesystem-to-HTTP interface allowing you to stream data
-from stdout to a remote location via HTTP.
+from stdout to a remote location or from a remote location to stdin via HTTP.
+
+This server does not support TLS/HTTPS, so use a reverse proxy for that.
 
 ## How to use this
 
